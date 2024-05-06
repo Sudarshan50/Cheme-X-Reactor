@@ -1,12 +1,12 @@
 import React from 'react'
 import{Routes ,Route,Navigate} from "react-router-dom"
-import Home from '../Home/home'
-import Cstr from '../CalculationLander/calcstr.js'
-import Pfr from '../CalculationLander/calpfr.js'
-import PackedBed from '../CalculationLander/calpbr.js';
-import BatchReactor from '../CalculationLander/calbatch.js'
-import AboutPro from '../About/About.js'
-import Team from '../Team/team.js'
+import Home from '../components/Home/home.js'
+import Cstr from '../components/CalculationLander/calcstr.js'
+import Pfr from '../components/CalculationLander/calpfr.js'
+import PackedBed from '../components/CalculationLander/calpbr.js';
+import BatchReactor from '../components/CalculationLander/calbatch.js'
+import AboutPro from '../components/About/About.js'
+import Team from '../components/Team/team.js'
 
 
 
