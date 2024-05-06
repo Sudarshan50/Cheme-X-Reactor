@@ -1,6 +1,6 @@
 import React from 'react'
 import{Routes ,Route,Navigate} from "react-router-dom"
-import Home from "../components/Home/home.js"
+import Home from '../components/Home/home.js'
 import Cstr from '../components/CalculationLander/calcstr.js'
 import Pfr from '../components/CalculationLander/calpfr.js'
 import PackedBed from '../components/CalculationLander/calpbr.js';
