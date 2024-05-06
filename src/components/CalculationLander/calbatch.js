@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MDBInput, MDBRow, MDBCol, MDBBtnGroup } from "mdb-react-ui-kit";
-import { Batch } from "../../Calculations/batch.js";
+import { Batch } from "../Calculations/batch.js";
 import "./calc.css";
 import Head from "../Header/header.js";
 import batchImg from "../../assets/batch_calc_page.jpg";

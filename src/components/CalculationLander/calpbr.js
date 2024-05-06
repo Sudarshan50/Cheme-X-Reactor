@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MDBInput, MDBRow, MDBCol, MDBBtnGroup } from "mdb-react-ui-kit";
 import "./calc1.css";
-import { pbr } from "../../Calculations/pbr.js";
+import { pbr } from "../Calculations/pbr.js";
 import Head from "../Header/header.js";
 import pbrImg from "../../assets/pbr_calc_page.jpg";
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MDBInput, MDBRow, MDBCol, MDBBtnGroup } from 'mdb-react-ui-kit';
-import { allcalc } from '../../Calculations/cstr.js';
+import { allcalc } from '../Calculations/cstr.js';
 import './calc.css';
 import Head from '../Header/header.js';
 import cstrImg from '../../assets/cstr_calc_page.jpg';

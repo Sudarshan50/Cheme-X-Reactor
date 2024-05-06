@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MDBInput, MDBRow, MDBCol, MDBBtnGroup } from "mdb-react-ui-kit";
-import { volume, conc, vol } from "../../Calculations/plugflow.js";
+import { volume, conc, vol } from "../Calculations/plugflow.js";
 import "./calc1.css";
 import Head from "../Header/header.js";
 import pfrImg from "../../assets/pfr_calc_page.jpg";
