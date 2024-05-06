@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from "../Footer/footer.js";
-import Router from '../Routers/router.js';
+import Router from '../../Routers/router.js';
 import NavbarCust from '../NavBar/navbar.js';
 
 
