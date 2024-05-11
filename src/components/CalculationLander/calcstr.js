@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MDBInput, MDBRow, MDBCol, MDBBtnGroup } from 'mdb-react-ui-kit';
-import { allcalc } from '../../Calculations/cstr.js';
+import { allcalc } from '../Calculations/cstr.js';
 import './calc.css';
 import Head from '../Header/header.js';
 import cstrImg from '../../assets/cstr_calc_page.jpg';
@@ -15,7 +15,14 @@ const Cstr = ()=> {
         let temp = document.getElementById('temp').value;
         let Ea = document.getElementById('actv').value;
         let initca = document.getElementById('initca').value;
-        setResult(allcalc(initca,vol,conv,temp,aplha,Ea));
+        let cond1 = (conv<=0 || conv>=1 || initca<=0 || Ea<=0 || temp<=0);
+        if(cond1){
+          alert("Please enter valid values!");
+        }
+          else{
+            setResult(allcalc(initca,vol,conv,temp,aplha,Ea));
+          }
+        
     }
   return (
     <>
@@ -24,22 +31,22 @@ const Cstr = ()=> {
       <MDBRow>
       <h6>Enter the following details:</h6>
         <MDBCol>
-        <MDBInput id='conv' label='Conversion'  type='text' />
+        <MDBInput id='conv' label='Conversion'  type='number' />
         </MDBCol>
         <MDBCol>
-        <MDBInput id='initca' label='Inital Concentration(mol/L)'  type='text' />
+        <MDBInput id='initca' label='Inital Concentration(mol/L)'  type='number' />
         </MDBCol>
         <MDBCol>
-        <MDBInput id='volre' label='Volumetric Flow Rate(m^3/hr)' type='text' />
+        <MDBInput id='volre' label='Volumetric Flow Rate(m^3/hr)' type='number' />
         </MDBCol>
         <MDBCol>
-        <MDBInput id='actv' label='Activation Energy(kJ/mol)' type='text' />
+        <MDBInput id='actv' label='Activation Energy(kJ/mol)' type='number' />
         </MDBCol>
         <MDBCol>
-        <MDBInput id='orre' label='Order of the reaction' type='text' />
+        <MDBInput id='orre' label='Order of the reaction' type='number' />
         </MDBCol>
         <MDBCol>
-        <MDBInput id='temp' label='Enter the temperature(K)' type='text' />
+        <MDBInput id='temp' label='Enter the temperature(K)' type='number' />
         </MDBCol>
       </MDBRow>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { MDBBtn } from "mdb-react-ui-kit";
+import "./header.css";
 
 const Head = (props) => {
   return (
@@ -17,7 +18,7 @@ const Head = (props) => {
             <div className="text-white">
               <h1 className="mb-3">{props.title}</h1>
               <h4 className="mb-3">{props.subtitle} </h4>
-              <MDBBtn tag="a" outline size="lg">
+              <MDBBtn className = "btn__term" tag="a" outline size="lg">
                 Term Project
               </MDBBtn>
             </div>

@@ -13,7 +13,7 @@ const Footer = () => {
     <MDBFooter className="bg-dark text-center text-white">
       <MDBContainer className="p-4 pb-0">
         <section className="mb-4">
-          <MDBBtn
+          {/* <MDBBtn
             outline
             color="light"
             floating
@@ -22,9 +22,9 @@ const Footer = () => {
             role="button"
           >
             <MDBIcon fab icon="facebook-f" />
-          </MDBBtn>
+          </MDBBtn> */}
 
-          <MDBBtn
+          {/* <MDBBtn
             outline
             color="light"
             floating
@@ -32,28 +32,30 @@ const Footer = () => {
             href="#!"
             role="button"
           >
-            <MDBIcon fab icon="twitter" />
-          </MDBBtn>
+            <MDBIcon fab icon="wikepedia" />
+          </MDBBtn> */}
 
           <MDBBtn
             outline
             color="light"
             floating
             className="m-1"
-            href="#!"
+            href="https://www.google.com"
             role="button"
           >
             <MDBIcon fab icon="google" />
           </MDBBtn>
+          
           <MDBBtn
             outline
             color="light"
             floating
             className="m-1"
-            href="#!"
+            href="https://www.wikipedia.org/"
             role="button"
           >
-            <MDBIcon fab icon="instagram" />
+            {/* <MDBIcon fab icon="linkedin-in" /> */}
+            <i class="fa-brands fa-wikipedia-w"></i>
           </MDBBtn>
 
           <MDBBtn
@@ -61,21 +63,10 @@ const Footer = () => {
             color="light"
             floating
             className="m-1"
-            href="#!"
+            href="https://www.researchgate.net/"
             role="button"
           >
-            <MDBIcon fab icon="linkedin-in" />
-          </MDBBtn>
-
-          <MDBBtn
-            outline
-            color="light"
-            floating
-            className="m-1"
-            href="#!"
-            role="button"
-          >
-            <MDBIcon fab icon="github" />
+            <i class="fa-brands fa-researchgate"></i>
           </MDBBtn>
         </section>
       </MDBContainer>

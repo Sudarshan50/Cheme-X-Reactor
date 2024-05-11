@@ -22,9 +22,9 @@ const List = () => {
           link = "/batch"
         />
         <CardImg
-          title={"CSTR"}
+          title={"Continuous Stirred Tank Reactor"}
           text={
-            "It's a type of reactor where reactants are continuously fed into a well-mixed tank reactor and products are continuously removed. It's characterized by uniform composition throughout the reactor. Offers good temperature and concentration control due to uniform mixing.Residence time distribution is relatively broad, meaning reactants spend varying amounts of time in the reactor. Commonly used in large-scale industrial processes like chemical production, wastewater treatment, and fermentation."
+            "It is a type of reactor where reactants are continuously fed into a well-mixed tank reactor and products are continuously removed. It's characterized by uniform composition throughout the reactor. Offers good temperature and concentration control due to uniform mixing.Residence time distribution is relatively broad, meaning reactants spend varying amounts of time in the reactor. Commonly used in large-scale industrial processes like chemical production, wastewater treatment, and fermentation."
           }
           photo={cstr}
           link = "/cstr"

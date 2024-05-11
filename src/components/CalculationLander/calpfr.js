@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MDBInput, MDBRow, MDBCol, MDBBtnGroup } from "mdb-react-ui-kit";
-import { volume, conc, vol } from "../../Calculations/plugflow.js";
+import { volume, conc, vol } from "../Calculations/plugflow.js";
 import "./calc1.css";
 import Head from "../Header/header.js";
 import pfrImg from "../../assets/pfr_calc_page.jpg";
@@ -20,42 +20,62 @@ const Pfr = () => {
     let c = document.getElementById("cval").value;
     let d = document.getElementById("dval").value;
     let kref = document.getElementById("kref").value;
-    var volrel = vol(a, b, c, d, conv, kref, Ea, temp, initfa, aplha, vol0); // Volume and Residence Time
-    var concentration = conc(a, b, c, d, initfa, vol0, conv); //Concentration of A and C
-    setResult([concentration[0], volrel[0], volrel[1]]);
+    if (
+      a <= 0 ||
+      b <= 0 ||
+      c <= 0 ||
+      d <= 0 ||
+      conv <= 0 ||
+      conv >= 1 ||
+      kref <= 0 ||
+      Ea <= 0 ||
+      temp <= 0 ||
+      initfa <= 0 ||
+      vol0 <= 0
+    ) {
+      alert("Please enter valid values!");
+    } else {
+      var volrel = vol(a, b, c, d, conv, kref, Ea, temp, initfa, aplha, vol0); // Volume and Residence Time
+      var concentration = conc(a, b, c, d, initfa, vol0, conv); //Concentration of A and C)
+      setResult([concentration[0], volrel[0], volrel[1]]);
+    }
   };
   return (
     <>
-    <Head title = {"Plug Flow Reactor"} subtitle = {"Reaction Coordinates"} photo = {pfrImg}/>
+      <Head
+        title={"Plug Flow Reactor"}
+        subtitle={"Reaction Coordinates"}
+        photo={pfrImg}
+      />
       <div className="sticho__entry">
         <MDBRow>
           <h6>Enter the stoichiometric details:</h6>
 
           <MDBCol>
-            <MDBInput id="aval" label="a" type="text" required />
+            <MDBInput id="aval" label="a" type="number" required />
           </MDBCol>
           <MDBCol>
-            <MDBInput id="bval" label="b" type="text" required />
+            <MDBInput id="bval" label="b" type="number" required />
           </MDBCol>
           <MDBCol>
-            <MDBInput id="cval" label="c" type="text" required />
+            <MDBInput id="cval" label="c" type="number" required />
           </MDBCol>
           <MDBCol>
-            <MDBInput id="dval" label="d" type="text" required />
+            <MDBInput id="dval" label="d" type="number" required />
           </MDBCol>
         </MDBRow>
       </div>
       <div className="calcualtion__grid">
         <MDBRow>
-      <h6>Enter the following details:</h6>
+          <h6>Enter the following details:</h6>
           <MDBCol>
-            <MDBInput id="conv" label="Conversion" type="text" required />
+            <MDBInput id="conv" label="Conversion" type="number" required />
           </MDBCol>
           <MDBCol>
             <MDBInput
               id="initca"
               label="Entering Molar Flow Rate(mol/hr)"
-              type="text"
+              type="number"
               required
             />
           </MDBCol>
@@ -63,7 +83,7 @@ const Pfr = () => {
             <MDBInput
               id="volre"
               label="Volumetric Flow Rate(m^3/hr)"
-              type="text"
+              type="number"
               required
             />
           </MDBCol>
@@ -71,7 +91,7 @@ const Pfr = () => {
             <MDBInput
               id="actv"
               label="Activation Energy(kJ/mol)"
-              type="text"
+              type="number"
               required
             />
           </MDBCol>
@@ -79,7 +99,7 @@ const Pfr = () => {
             <MDBInput
               id="orre"
               label="Order of the reaction"
-              type="text"
+              type="number"
               required
             />
           </MDBCol>
@@ -87,7 +107,7 @@ const Pfr = () => {
             <MDBInput
               id="temp"
               label="Enter the temperature(in K)"
-              type="text"
+              type="number"
               required
             />
           </MDBCol>
@@ -99,7 +119,7 @@ const Pfr = () => {
             <MDBInput
               id="kref"
               label="Enter the value of k at 300K"
-              type="text"
+              type="number"
               required
             />
           </MDBCol>
